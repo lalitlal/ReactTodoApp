@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Sidebar from "./components/Sidebar";
+import Main from "./components/Main";
+import User from "./components/User";
+import AddNewTodo from "./components/AddNewTodo";
+import Calendar from "./components/Calendar";
+import Projects from "./components/Projects";
+import Todos from "./components/Todos";
+import EditTodo from "./components/EditTodo";
+// Inspiration: https://github.com/Tammibriggs/Task-manager
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar>
+        <User></User>
+        <AddNewTodo></AddNewTodo>
+        <Calendar></Calendar>
+        <Projects></Projects>
+      </Sidebar>
+      <Main>
+        <Todos></Todos>
+        <EditTodo></EditTodo>
+      </Main>
     </div>
   );
 }
