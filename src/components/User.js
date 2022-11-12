@@ -8,7 +8,6 @@ function User() {
       </div>
       <div className="info">
         <p>Lalit's React App</p>
-        <a href="#">Logout!</a>
       </div>
     </div>
   );
